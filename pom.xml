@@ -202,7 +202,6 @@
 
 	</dependencies>
     <build>
-		<version>1.2</version>
 		<outputDirectory>target/${project.artifactId}/WEB-INF/classes</outputDirectory>
 		<plugins>
 		<plugin>
