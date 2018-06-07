@@ -8,7 +8,7 @@
 <title>Login</title>
 </head>
 
-<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
 
 <!-- CSS -->
 <link href="<spring:message code="domain"/>/resources/lib/bootstrap/css/bootstrap.min.css"	rel="stylesheet">
