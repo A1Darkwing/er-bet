@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/betapp/!svn/ver/90/trunk/src/main/java/com/csc/betapp/dao/mapper
+END
+MatchRecordMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/betapp/!svn/ver/27/trunk/src/main/java/com/csc/betapp/dao/mapper/MatchRecordMapper.java
+END
+GroupMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/betapp/!svn/ver/5/trunk/src/main/java/com/csc/betapp/dao/mapper/GroupMapper.java
+END
+MatchMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/betapp/!svn/ver/43/trunk/src/main/java/com/csc/betapp/dao/mapper/MatchMapper.java
+END
+MatchTypeMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/betapp/!svn/ver/30/trunk/src/main/java/com/csc/betapp/dao/mapper/MatchTypeMapper.java
+END
+UserMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/betapp/!svn/ver/46/trunk/src/main/java/com/csc/betapp/dao/mapper/UserMapper.java
+END
+UserRecordDetailMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/betapp/!svn/ver/46/trunk/src/main/java/com/csc/betapp/dao/mapper/UserRecordDetailMapper.java
+END
+CustomerMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/betapp/!svn/ver/90/trunk/src/main/java/com/csc/betapp/dao/mapper/CustomerMapper.java
+END
+TypeMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/betapp/!svn/ver/11/trunk/src/main/java/com/csc/betapp/dao/mapper/TypeMapper.java
+END
+MatchRecordLineMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/betapp/!svn/ver/29/trunk/src/main/java/com/csc/betapp/dao/mapper/MatchRecordLineMapper.java
+END
+BetInfoMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/betapp/!svn/ver/25/trunk/src/main/java/com/csc/betapp/dao/mapper/BetInfoMapper.java
+END
+TeamMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/betapp/!svn/ver/5/trunk/src/main/java/com/csc/betapp/dao/mapper/TeamMapper.java
+END

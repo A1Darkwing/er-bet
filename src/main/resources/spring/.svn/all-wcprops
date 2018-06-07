@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/betapp/!svn/ver/76/trunk/src/main/resources/spring
+END
+applicationContext.xml
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/betapp/!svn/ver/76/trunk/src/main/resources/spring/applicationContext.xml
+END
+applicationContext-security.xml
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/betapp/!svn/ver/69/trunk/src/main/resources/spring/applicationContext-security.xml
+END

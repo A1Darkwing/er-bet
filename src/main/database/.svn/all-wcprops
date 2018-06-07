@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/betapp/!svn/ver/101/trunk/src/main/database
+END
+dump.txt
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/betapp/!svn/ver/99/trunk/src/main/database/dump.txt
+END
+Dump20160608.sql
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/betapp/!svn/ver/102/trunk/src/main/database/Dump20160608.sql
+END
+bet.mwb
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/betapp/!svn/ver/90/trunk/src/main/database/bet.mwb
+END

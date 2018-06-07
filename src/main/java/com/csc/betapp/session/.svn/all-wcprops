@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/betapp/!svn/ver/12/trunk/src/main/java/com/csc/betapp/session
+END
+SessionHolder.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/betapp/!svn/ver/12/trunk/src/main/java/com/csc/betapp/session/SessionHolder.java
+END
+Session.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/betapp/!svn/ver/4/trunk/src/main/java/com/csc/betapp/session/Session.java
+END
+SessionType.java
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/betapp/!svn/ver/4/trunk/src/main/java/com/csc/betapp/session/SessionType.java
+END

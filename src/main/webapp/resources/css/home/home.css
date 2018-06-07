@@ -1,0 +1,34 @@
+fieldset[disabled] .form-control:not(textarea), .form-control-wrapper .form-control:not(textarea), .form-control:not(textarea), fieldset[disabled] .form-control:focus:not(textarea), .form-control-wrapper .form-control:focus:not(textarea), .form-control:focus:not(textarea), fieldset[disabled] .form-control.focus:not(textarea), .form-control-wrapper .form-control.focus:not(textarea), .form-control.focus:not(textarea) {
+  height: 28px !important;
+}
+
+#floating-action-button .btn {
+	margin: 15px 5px;
+}
+
+#floating-action-button .btn i {
+	top: 0 !important;
+}
+
+body {
+	font-family: Lobster;
+}
+
+H2 {
+	text-align: center;
+	color: white;
+}
+
+.card-child {
+	margin-top: 10px;
+}
+
+img {
+	max-width: 100%;
+}
+
+.datepicker table tr td.day:hover,
+.datepicker table tr td.day.focused {
+  background: #eeeeee;
+  cursor: pointer;
+}

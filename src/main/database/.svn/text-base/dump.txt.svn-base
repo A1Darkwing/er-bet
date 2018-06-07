@@ -1,0 +1,258 @@
+-- -----------------------------------------------------
+-- Table `betapp`.`Customers`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `betapp`.`Customers` (
+  `Id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `Name` VARCHAR(100) NOT NULL,
+  PRIMARY KEY (`Id`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `betapp`.`Users`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `betapp`.`Users` (
+  `Id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `Username` VARCHAR(100) NOT NULL,
+  `Password` VARCHAR(50) NOT NULL,
+  `CustomerId` INT UNSIGNED NOT NULL,
+  `Role` VARCHAR(100) NULL,
+  PRIMARY KEY (`Id`),
+  INDEX `fk_Users_Teams_idx` (`CustomerId` ASC),
+  UNIQUE INDEX `Username_UNIQUE` (`Username` ASC),
+  CONSTRAINT `fk_Users_Teams`
+    FOREIGN KEY (`CustomerId`)
+    REFERENCES `betapp`.`Customers` (`Id`)
+    ON DELETE CASCADE
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `betapp`.`Groups`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `betapp`.`Groups` (
+  `Id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `Name` VARCHAR(100) NOT NULL,
+  PRIMARY KEY (`Id`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `betapp`.`Teams`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `betapp`.`Teams` (
+  `Id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `Name` VARCHAR(100) NOT NULL,
+  `Flag` LONGTEXT NOT NULL,
+  `GroupId` INT UNSIGNED NOT NULL,
+  PRIMARY KEY (`Id`),
+  INDEX `fk_Teams_Groups1_idx` (`GroupId` ASC),
+  CONSTRAINT `fk_Teams_Groups1`
+    FOREIGN KEY (`GroupId`)
+    REFERENCES `betapp`.`Groups` (`Id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `betapp`.`Types`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `betapp`.`Types` (
+  `Id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `Name` VARCHAR(100) NOT NULL,
+  PRIMARY KEY (`Id`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `betapp`.`MatchTypes`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `betapp`.`MatchTypes` (
+  `Id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `Stake` INT UNSIGNED NOT NULL,
+  `CustomerId` INT UNSIGNED NOT NULL,
+  `TypeId` INT UNSIGNED NOT NULL,
+  PRIMARY KEY (`Id`),
+  INDEX `fk_Types_Customers1_idx` (`CustomerId` ASC),
+  INDEX `fk_Stakes_Types1_idx` (`TypeId` ASC),
+  CONSTRAINT `fk_Types_Customers1`
+    FOREIGN KEY (`CustomerId`)
+    REFERENCES `betapp`.`Customers` (`Id`)
+    ON DELETE CASCADE
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_Stakes_Types1`
+    FOREIGN KEY (`TypeId`)
+    REFERENCES `betapp`.`Types` (`Id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `betapp`.`Matchs`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `betapp`.`Matchs` (
+  `Id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `Team1Id` INT UNSIGNED NOT NULL,
+  `Team2Id` INT UNSIGNED NOT NULL,
+  `MatchRate` DOUBLE NULL,
+  `MatchTime` DATETIME NOT NULL,
+  `ScoreTeam1` INT NULL,
+  `ScoreTeam2` INT NULL,
+  `CustomerId` INT UNSIGNED NOT NULL,
+  `MatchTypeId` INT UNSIGNED NOT NULL,
+  PRIMARY KEY (`Id`),
+  INDEX `fk_Matchs_Teams1_idx` (`Team1Id` ASC),
+  INDEX `fk_Matchs_Teams2_idx` (`Team2Id` ASC),
+  INDEX `fk_Matchs_Customers1_idx` (`CustomerId` ASC),
+  INDEX `fk_Matchs_MatchTypes1_idx` (`MatchTypeId` ASC),
+  CONSTRAINT `fk_Matchs_Teams1`
+    FOREIGN KEY (`Team1Id`)
+    REFERENCES `betapp`.`Teams` (`Id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_Matchs_Teams2`
+    FOREIGN KEY (`Team2Id`)
+    REFERENCES `betapp`.`Teams` (`Id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_Matchs_Customers1`
+    FOREIGN KEY (`CustomerId`)
+    REFERENCES `betapp`.`Customers` (`Id`)
+    ON DELETE CASCADE
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_Matchs_MatchTypes1`
+    FOREIGN KEY (`MatchTypeId`)
+    REFERENCES `betapp`.`MatchTypes` (`Id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `betapp`.`Bets`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `betapp`.`Bets` (
+  `Id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `UserId` INT UNSIGNED NOT NULL,
+  `MatchId` INT UNSIGNED NOT NULL,
+  `Result` VARCHAR(1) NULL,
+  `BetTime` DATETIME NOT NULL,
+  `Selection` INT UNSIGNED NULL,
+  `LoseMoney` INT NULL,
+  `CustomerId` INT UNSIGNED NOT NULL,
+  PRIMARY KEY (`Id`),
+  INDEX `fk_Bets_Users1_idx` (`UserId` ASC),
+  INDEX `fk_Bets_Matchs1_idx` (`MatchId` ASC),
+  INDEX `fk_Bets_Customers1_idx` (`CustomerId` ASC),
+  CONSTRAINT `fk_Bets_Users1`
+    FOREIGN KEY (`UserId`)
+    REFERENCES `betapp`.`Users` (`Id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_Bets_Matchs1`
+    FOREIGN KEY (`MatchId`)
+    REFERENCES `betapp`.`Matchs` (`Id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_Bets_Customers1`
+    FOREIGN KEY (`CustomerId`)
+    REFERENCES `betapp`.`Customers` (`Id`)
+    ON DELETE CASCADE
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+INSERT INTO `customers` VALUES (1,'ER',100);
+INSERT INTO `customers` VALUES (2,'SYSTEM',1);
+
+INSERT INTO `users` VALUES (1,'tvo35','c4ca4238a0b923820dcc509a6f75849b',1,'ROLE_ADMIN');
+INSERT INTO `users` VALUES (2,'site_admin','c4ca4238a0b923820dcc509a6f75849b',2,'ROLE_SITE_ADMIN');
+
+INSERT INTO `betapp`.`types` (`Id`, `Name`) VALUES ('1', 'Qualification');
+INSERT INTO `betapp`.`types` (`Id`, `Name`) VALUES ('2', 'Semi-Final');
+INSERT INTO `betapp`.`types` (`Id`, `Name`) VALUES ('3', 'Third Place');
+INSERT INTO `betapp`.`types` (`Id`, `Name`) VALUES ('4', 'Final');
+
+
+INSERT INTO `betapp`.`matchtypes` (`Id`, `Stake`, `CustomerId`, `TypeId`) VALUES ('1', '10000', '1', '1');
+INSERT INTO `betapp`.`matchtypes` (`Id`, `Stake`, `CustomerId`, `TypeId`) VALUES ('2', '20000', '1', '2');
+INSERT INTO `betapp`.`matchtypes` (`Id`, `Stake`, `CustomerId`, `TypeId`) VALUES ('3', '50000', '1', '3');
+INSERT INTO `betapp`.`matchtypes` (`Id`, `Stake`, `CustomerId`, `TypeId`) VALUES ('4', '50000', '1', '4');
+
+insert into betapp.groups (Id, Name) values (1, 'Group A'),
+											(2, 'Group B'),
+											(3, 'Group C'),
+											(4, 'Group D'),
+                                            (5, 'Group E'),
+                                            (6, 'Group F')
+
+INSERT INTO `teams` VALUES (1,'Albania','albania',1),
+							(2,'France','france',1),
+							(3,'Romania','romania',1),
+							(4,'Switzerland','switzerland',1)
+
+INSERT INTO `teams` VALUES (5,'England','england',2),
+							(6,'Russia','russia',2),
+							(7,'Slovakia','slovakia',2),
+							(8,'Wales','wales',2)
+							
+INSERT INTO `teams` VALUES (9,'Germany','germany',3),
+							(10,'Northern Ireland','norhternIreland',3),
+							(11,'Poland','poland',3),
+							(12,'Ukraine','ukraine',3)
+							
+INSERT INTO `teams` VALUES (13,'Croatia','croatia',4),
+							(14,'Czech Republic','czechRepublic',4),
+							(15,'Spain','spain',4),
+							(16,'Turkey','turkey',4)
+							
+INSERT INTO `teams` VALUES (17,'Belgium','belgium',5),
+							(18,'Italy','italy',5),
+							(19,'Republic of Ireland','republicIreland',5),
+							(20,'Sweden','sweden',5)
+							
+INSERT INTO `teams` VALUES (21,'Austria','austria',6),
+							(22,'Hungary','hungary',6),
+							(23,'Iceland','iceland',6),
+							(24,'Portugal','portugal',6)
+							
+							
+INSERT INTO `matchs` (`Team1Id`, `Team2Id`, `MatchRate`, `MatchTime`, `ScoreTeam1`, `ScoreTeam2`, `CustomerId`, `MatchTypeId`) VALUES 
+(2,3,null,'2016-06-11 02:00:00', null, null, 1, 1),
+(1,4,null,'2016-06-11 20:00:00', null, null, 1, 1),
+(8,7,null,'2016-06-11 23:00:00', null, null, 1, 1),
+(5,6,null,'2016-06-12 02:00:00', null, null, 1, 1),
+(16,13,null,'2016-06-12 20:00:00', null, null, 1, 1),
+(11,10,null,'2016-06-12 23:00:00', null, null, 1, 1),
+(9,12,null,'2016-06-13 02:00:00', null, null, 1, 1),
+(15,14,null,'2016-06-13 20:00:00', null, null, 1, 1),
+(20,19,null,'2016-06-13 23:00:00', null, null, 1, 1),
+(17,18,null,'2016-06-14 02:00:00', null, null, 1, 1),
+(21,22,null,'2016-06-14 23:00:00', null, null, 1, 1),
+(24,23,null,'2016-06-15 02:00:00', null, null, 1, 1),
+(6,7,null,'2016-06-15 20:00:00', null, null, 1, 1),
+(3,4,null,'2016-06-15 23:00:00', null, null, 1, 1),
+(2,1,null,'2016-06-16 02:00:00', null, null, 1, 1),
+(5,8,null,'2016-06-16 20:00:00', null, null, 1, 1),
+(12,10,null,'2016-06-16 23:00:00', null, null, 1, 1),
+(9,11,null,'2016-06-17 02:00:00', null, null, 1, 1),
+(18,20,null,'2016-06-17 20:00:00', null, null, 1, 1),
+(14,13,null,'2016-06-17 23:00:00', null, null, 1, 1),
+(15,16,null,'2016-06-18 02:00:00', null, null, 1, 1),
+(17,19,null,'2016-06-18 20:00:00', null, null, 1, 1),
+(23,22,null,'2016-06-18 23:00:00', null, null, 1, 1),
+(24,21,null,'2016-06-19 02:00:00', null, null, 1, 1),
+(2,4,null,'2016-06-20 02:00:00', null, null, 1, 1),
+(3,1,null,'2016-06-20 02:00:00', null, null, 1, 1),
+(7,5,null,'2016-06-21 02:00:00', null, null, 1, 1),
+(6,8,null,'2016-06-21 02:00:00', null, null, 1, 1),
+(12,11,null,'2016-06-21 23:00:00', null, null, 1, 1),
+(19,17,null,'2016-06-21 23:00:00', null, null, 1, 1),
+(13,15,null,'2016-06-22 02:00:00', null, null, 1, 1),
+(14,16,null,'2016-06-22 02:00:00', null, null, 1, 1),
+(22,24,null,'2016-06-22 23:00:00', null, null, 1, 1),
+(23,21,null,'2016-06-22 23:00:00', null, null, 1, 1),
+(18,19,null,'2016-06-23 02:00:00', null, null, 1, 1),
+(20,17,null,'2016-06-23 02:00:00', null, null, 1, 1)

@@ -1,0 +1,95 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/betapp/!svn/ver/100/trunk/src/main/java/com/csc/betapp/model
+END
+UserRecordDetail.java
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/betapp/!svn/ver/46/trunk/src/main/java/com/csc/betapp/model/UserRecordDetail.java
+END
+Customer.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/betapp/!svn/ver/90/trunk/src/main/java/com/csc/betapp/model/Customer.java
+END
+MatchRecordLine.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/betapp/!svn/ver/29/trunk/src/main/java/com/csc/betapp/model/MatchRecordLine.java
+END
+UserRecord.java
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/betapp/!svn/ver/75/trunk/src/main/java/com/csc/betapp/model/UserRecord.java
+END
+User.java
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/betapp/!svn/ver/46/trunk/src/main/java/com/csc/betapp/model/User.java
+END
+TeamStatistic.java
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/betapp/!svn/ver/100/trunk/src/main/java/com/csc/betapp/model/TeamStatistic.java
+END
+AuthenticationUser.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/betapp/!svn/ver/46/trunk/src/main/java/com/csc/betapp/model/AuthenticationUser.java
+END
+Type.java
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/betapp/!svn/ver/10/trunk/src/main/java/com/csc/betapp/model/Type.java
+END
+Team.java
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/betapp/!svn/ver/5/trunk/src/main/java/com/csc/betapp/model/Team.java
+END
+BetInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/betapp/!svn/ver/88/trunk/src/main/java/com/csc/betapp/model/BetInfo.java
+END
+MatchRecord.java
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/betapp/!svn/ver/27/trunk/src/main/java/com/csc/betapp/model/MatchRecord.java
+END
+Match.java
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/betapp/!svn/ver/43/trunk/src/main/java/com/csc/betapp/model/Match.java
+END
+Group.java
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/betapp/!svn/ver/5/trunk/src/main/java/com/csc/betapp/model/Group.java
+END
+MatchRecordType.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/betapp/!svn/ver/27/trunk/src/main/java/com/csc/betapp/model/MatchRecordType.java
+END
+MatchType.java
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/betapp/!svn/ver/10/trunk/src/main/java/com/csc/betapp/model/MatchType.java
+END

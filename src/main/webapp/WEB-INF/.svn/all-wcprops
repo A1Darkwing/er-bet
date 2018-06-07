@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/betapp/!svn/ver/100/trunk/src/main/webapp/WEB-INF
+END
+spring-servlet.xml
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/betapp/!svn/ver/76/trunk/src/main/webapp/WEB-INF/spring-servlet.xml
+END
+web.xml
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/betapp/!svn/ver/4/trunk/src/main/webapp/WEB-INF/web.xml
+END

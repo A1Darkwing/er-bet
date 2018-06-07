@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/betapp/!svn/ver/100/trunk/src/main/webapp/WEB-INF/views
+END
+user-header.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/betapp/!svn/ver/81/trunk/src/main/webapp/WEB-INF/views/user-header.jsp
+END
+user-navbar.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/betapp/!svn/ver/73/trunk/src/main/webapp/WEB-INF/views/user-navbar.jsp
+END
+report-user.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/betapp/!svn/ver/63/trunk/src/main/webapp/WEB-INF/views/report-user.jsp
+END
+admin.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/betapp/!svn/ver/4/trunk/src/main/webapp/WEB-INF/views/admin.jsp
+END
+home.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/betapp/!svn/ver/102/trunk/src/main/webapp/WEB-INF/views/home.jsp
+END
+login.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/betapp/!svn/ver/90/trunk/src/main/webapp/WEB-INF/views/login.jsp
+END
+user-footer.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/betapp/!svn/ver/4/trunk/src/main/webapp/WEB-INF/views/user-footer.jsp
+END
+site-navbar.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/betapp/!svn/ver/73/trunk/src/main/webapp/WEB-INF/views/site-navbar.jsp
+END
+admin-navbar.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/betapp/!svn/ver/73/trunk/src/main/webapp/WEB-INF/views/admin-navbar.jsp
+END
+report-team.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/betapp/!svn/ver/102/trunk/src/main/webapp/WEB-INF/views/report-team.jsp
+END

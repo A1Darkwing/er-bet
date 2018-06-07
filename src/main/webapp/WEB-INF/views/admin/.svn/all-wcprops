@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/betapp/!svn/ver/90/trunk/src/main/webapp/WEB-INF/views/admin
+END
+menu.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/betapp/!svn/ver/90/trunk/src/main/webapp/WEB-INF/views/admin/menu.jsp
+END
+match.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/betapp/!svn/ver/84/trunk/src/main/webapp/WEB-INF/views/admin/match.jsp
+END
+match-create.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/betapp/!svn/ver/86/trunk/src/main/webapp/WEB-INF/views/admin/match-create.jsp
+END
+user.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/betapp/!svn/ver/84/trunk/src/main/webapp/WEB-INF/views/admin/user.jsp
+END
+customer.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/betapp/!svn/ver/90/trunk/src/main/webapp/WEB-INF/views/admin/customer.jsp
+END
+type.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/betapp/!svn/ver/63/trunk/src/main/webapp/WEB-INF/views/admin/type.jsp
+END

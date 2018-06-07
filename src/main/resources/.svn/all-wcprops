@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/betapp/!svn/ver/100/trunk/src/main/resources
+END
+config.properties
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/betapp/!svn/ver/102/trunk/src/main/resources/config.properties
+END
+log4j.properties
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/betapp/!svn/ver/4/trunk/src/main/resources/log4j.properties
+END
