@@ -202,18 +202,6 @@
 
 	</dependencies>
     <build>
-		<outputDirectory>target/${project.artifactId}/WEB-INF/classes</outputDirectory>
-		<plugins>
-		<plugin>
-			<groupId>com.google.cloud.tools</groupId>
-			<artifactId>appengine-maven-plugin</artifactId>
-			<version>${appengine-maven-plugin-version}</version>
-		</plugin>
-		<plugin>
-			<groupId>org.eclipse.jetty</groupId>
-			<artifactId>jetty-maven-plugin</artifactId>
-			<version>9.3.7.v20160115</version>
-		</plugin>
-		</plugins>
+		<finalName>betapp</finalName>
 	</build>
 </project>
