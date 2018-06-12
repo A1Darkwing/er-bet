@@ -37,7 +37,7 @@
 <c:import url="/WEB-INF/views/user-header.jsp" />
 <body class="toggled sw-toggled">
 	<c:import url="/WEB-INF/views/admin-navbar.jsp" />
-	<c:import url="/WEB-INF/views/admin//menu.jsp" />
+	<c:import url="/WEB-INF/views/admin/menu.jsp" />
 
 	<section id="content">
 	<div class="container">

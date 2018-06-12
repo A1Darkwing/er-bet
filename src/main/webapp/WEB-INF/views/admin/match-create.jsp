@@ -41,7 +41,7 @@
 <link href="<spring:message code="domain"/>/resources/lib/bootstrap/css/bootstrap-datetimepicker.css"	rel="stylesheet">
 <body class="toggled sw-toggled">
 	<c:import url="/WEB-INF/views/admin-navbar.jsp" />
-	<c:import url="/WEB-INF/views/admin//menu.jsp" />
+	<c:import url="/WEB-INF/views/admin/menu.jsp" />
 
 	<section id="content">
 	<div class="container">
