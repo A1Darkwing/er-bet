@@ -46,7 +46,7 @@
 <body>
 	<div>
 		<div style="margin-top: 5%"
-			class="col-xs-8 col-xs-offset-2 col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4">
+			class="col-xs-8 col-xs-offset-2 col-sm-10 col-sm-offset-1 col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4">
 			<div class="center-block" id="floating-action-button" align="center" style="font-family: 'Lobster', cursive; font-size: 50px">
 			Bet Application
 			</div>

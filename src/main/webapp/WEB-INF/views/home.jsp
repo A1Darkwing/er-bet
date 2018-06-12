@@ -90,11 +90,11 @@
 					<c:forEach items="${todayMatches}" var="match">
 						<p id="mTime_${match.id}" hidden>${match.matchTime}</p>
 						<div class="row todayMatch table table-striped table-bordered table-condensed bs-item z-depth-1" id="todayMatch_${match.matchTime}">
-							<div class="col-sm-2 mTime"  style="font-family: 'Lobster', cursive; font-size: 200%">
+							<div class="col-md-2 col-sm-12 mTime"  style="font-family: 'Lobster', cursive; font-size: 200%">
 								<fmt:formatDate type="both" timeStyle="short" value="${match.matchTime}"  pattern="dd/MM/yyyy HH:mm"/>
 								<p>
 							</div>
-							<div class="col-sm-5 mTeam" >
+							<div class="col-md-5 col-sm-12 mTeam" >
 								<div class="row"  style="font-family: 'Lobster', cursive; font-size: 200%">
 									<c:out value="${match.team1Name}" />
 									-
@@ -108,7 +108,7 @@
 								</div>
 								<div class="row mScore" style="font-family: 'Lobster', cursive;">Score:</div>
 							</div>
-							<div class="col-xs-12 col-sm-5">
+							<div class="col-xs-12 col-md-5 col-sm-12">
 								<div class="row checkbox checkbox-primary flags">
 									
 									<img alt="${match.team1Name}" src="resources/img/flags/${match.team1Flag}.png">
