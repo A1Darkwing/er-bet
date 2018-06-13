@@ -27,5 +27,5 @@ runtime_config:  # Optional
   server: jetty9
 
 manual_scaling:
-  instances: 3
+  instances: 1
 # [END runtime]
