@@ -11,8 +11,7 @@
 			</div>
 		</li>
 
-		<li class="logo hidden-xs"><a href="home">Bet
-				Application</a></li>
+		<li class="logo hidden-xs"><a href="home">World Cup 2018 Bet</a></li>
 
 		<li class="pull-right">
 			<ul class="top-menu">
@@ -36,7 +35,7 @@
 		<div class="modal-content">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal"
-					aria-hidden="true">×</button>
+					aria-hidden="true">ï¿½</button>
 				<h4 class="modal-title">Change Password</h4>
 			</div>
 			<div class="modal-body">
