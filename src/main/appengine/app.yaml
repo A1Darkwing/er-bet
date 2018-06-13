@@ -18,17 +18,17 @@
 runtime: java
 env: flex
 
+runtime_config:  # Optional
+  jdk: openjdk8
+
 handlers:
 - url: /.*
   script: this field is required, but ignored
-
-runtime_config:  # Optional
-  jdk: openjdk8
-  server: jetty9
-
-health_check:
-  enable_health_check: False
+  secure: always  # Require HTTPS
 
 manual_scaling:
   instances: 1
+
+health_check:
+  enable_health_check: False
 # [END runtime]
