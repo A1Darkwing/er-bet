@@ -212,6 +212,14 @@
 				<processTypes>
 					<web>java $JAVA_OPTS -cp target/classes:target/dependency/* Main</web>
 				</processTypes>
+				<executions>
+					<execution>
+						<phase>verify</phase>
+						<goals>
+							<goal>deploy</goal>
+						</goals>
+					</execution>
+				</executions>
 			</configuration>
 		</plugin>
 		<plugin>
